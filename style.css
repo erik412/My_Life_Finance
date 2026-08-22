@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Slate Scale */
+  --slate-50:  #f8fafc;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* Blue Scale */
+  --blue-400:  #60a5fa;
+  --blue-900:  #1e3a8a;
+
+  /* Emerald & Red Scale */
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --red-400:     #f87171;
+  --red-600:     #dc2626;
+}
+
+/* Light Theme (Default) */
+:root, [data-theme="light"] {
+  --bg-main:       var(--slate-50);
+  --text-primary:  var(--slate-900); /* Dark text for high readability */
+  --text-muted:    var(--slate-500); /* Sub-labels and dates */
+  --header-color:  var(--blue-900);
+  --button-action: var(--emerald-600);
+  --value-gain:    var(--emerald-600);
+  --value-loss:    var(--red-600);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-main:       var(--slate-900);
+  --text-primary:  var(--slate-50);  /* Bright text for dark bg */
+  --text-muted:    var(--slate-400);
+  --header-color:  var(--blue-400);  /* High-contrast blue for dark mode */
+  --button-action: var(--emerald-500);
+  --value-gain:    var(--emerald-500);
+  --value-loss:    var(--red-400);   /* Brighter red for visibility */
+}
+
+body {
+    display: grid;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+}
