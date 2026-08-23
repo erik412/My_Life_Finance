@@ -4,7 +4,7 @@
 }
 
 :root {
-  /* Slate Scale */
+  /* S`ate Scale */
   --slate-50: #f8fafc;
   --slate-400: #94a3b8;
   --slate-500: #64748b;
@@ -73,6 +73,8 @@ body.landing-page {
   background-color: color-mix(in srgb, var(--header-color) 70%, transparent);
   width: 80%;
   border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .landing-page-header-container > * {
@@ -99,17 +101,17 @@ body.landing-page {
 
 }
 
-.middle-top,
-.middle-bottom {
+.date-container,
+.greeting-container {
   grid-column: 2;
   justify-content: center;
 }
 
-.middle-top {
+.date-container {
   grid-row: 1;
 }
 
-.middle-bottom {
+.greeting-container {
   grid-row: 2;
 }
 
@@ -119,6 +121,7 @@ body.landing-page {
 }
 
 .signin-link a, .signup-link a{
+  display: inline-block;
   background-color: var(--emerald-500);
   text-decoration: none;
   color: black;
@@ -126,4 +129,11 @@ body.landing-page {
   font-weight: bold;
   border-radius: 5px;
   padding: 5px;
+  transition: transform 0.2s ease, background-color 0.2s ease; 
+}
+
+.signin-link a:hover, .signup-link a:hover{
+  background-color: var(--emerald-600);
+  transform: translateY(-4px) translateX(-4px);
+  color: white
 }
