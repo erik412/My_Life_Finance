@@ -56,7 +56,7 @@ body {
 }
 
 body.landing-page {
-  background-image: url("/images/nattanan23-money-2696228.jpg");
+  background-image: url("/images/vacation_background.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,16 +89,15 @@ body.landing-page {
 
 .logo-container {
   display: flex;
-  grid-column: 1;  
+  grid-column: 1;
   gap: 10px;
   font-size: 24px;
   font-weight: bold;
 }
 
-.header-icon{
+.header-icon {
   max-height: 75px;
   margin-left: 10px;
-
 }
 
 .date-container,
@@ -120,7 +119,8 @@ body.landing-page {
   justify-content: space-evenly;
 }
 
-.signin-link a, .signup-link a{
+.signin-link a,
+.signup-link a {
   display: inline-block;
   background-color: var(--emerald-500);
   text-decoration: none;
@@ -129,11 +129,14 @@ body.landing-page {
   font-weight: bold;
   border-radius: 5px;
   padding: 5px;
-  transition: transform 0.2s ease, background-color 0.2s ease; 
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.signin-link a:hover, .signup-link a:hover{
+.signin-link a:hover,
+.signup-link a:hover {
   background-color: var(--emerald-600);
   transform: translateY(-4px) translateX(-4px);
-  color: white
+  color: white;
 }
