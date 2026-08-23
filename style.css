@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 
+/* Site colors */
 :root {
   /* S`ate Scale */
   --slate-50: #f8fafc;
@@ -45,6 +46,7 @@
   --value-loss: var(--red-400); /* Brighter red for visibility */
 }
 
+/* General CSS */
 body {
   display: grid;
   grid-template-rows: 125px 1fr;
@@ -139,4 +141,8 @@ body.landing-page {
   background-color: var(--emerald-600);
   transform: translateY(-4px) translateX(-4px);
   color: white;
+}
+
+.landing-page-content {
+  color: var(--text-primary);
 }
