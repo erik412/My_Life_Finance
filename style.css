@@ -48,8 +48,7 @@
 
 /* General CSS */
 body {
-  display: grid;
-  grid-template-rows: 125px 1fr;
+  display: grid;  
   background-color: var(--bg-main);
   color: var(--text-primary);
   font-family: "Manrope", sans-serif;
@@ -58,6 +57,8 @@ body {
 }
 
 body.landing-page {
+  display: grid;
+  grid-template-rows: 125px 1fr;
   background-image: url("/images/vacation_background.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -73,6 +74,7 @@ body.landing-page {
   grid-row: 1;
   margin: 25px auto 0 auto;
   background-color: color-mix(in srgb, var(--header-color) 70%, transparent);
+  color: var(--slate-50);
   width: 80%;
   border-radius: 10px;
   font-size: 24px;
@@ -146,3 +148,49 @@ body.landing-page {
 .landing-page-content {
   color: var(--text-primary);
 }
+
+/* Sign Up Page */
+body.signup-page {
+  display: grid;  
+  grid-template-rows: 125px 1fr;  
+}
+
+.signup-link .inactive-link{
+  pointer-events: none;  
+  display: none;
+}
+
+.signup-content{
+  display: grid;
+  grid-template-columns: 1fr calc(40%) calc(40%) 1fr;
+  margin-top: 50px;  
+  gap: 10px;
+}
+
+
+.signup-reason, .signup-form {  
+  line-height: 1.5;
+  font-size: 20px;
+  background-color: white;
+  border-left: 6px solid var(--emerald-500);
+  border-top: 1px solid var(--slate-400);
+  border-right: 1px solid var(--slate-400);
+  border-bottom: 1px solid var(--slate-400);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 10%;
+  border-radius: 15px;  
+}
+
+.signup-reason {
+  grid-column: 2;
+}
+.signup-reason h3, .signup-form h3 {
+  color: var(--blue-900);
+}
+
+.signup-form {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+}
+
