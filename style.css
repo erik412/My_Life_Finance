@@ -48,7 +48,7 @@
 
 /* General CSS */
 body {
-  display: grid;  
+  display: grid;
   background-color: var(--bg-main);
   color: var(--text-primary);
   font-family: "Manrope", sans-serif;
@@ -151,24 +151,24 @@ body.landing-page {
 
 /* Sign Up Page */
 body.signup-page {
-  display: grid;  
-  grid-template-rows: 125px 1fr;  
+  display: grid;
+  grid-template-rows: 125px 1fr;
 }
 
-.signup-link .inactive-link{
-  pointer-events: none;  
+.signup-link .inactive-link {
+  pointer-events: none;
   display: none;
 }
 
-.signup-content{
+.signup-content {
   display: grid;
   grid-template-columns: 1fr calc(40%) calc(40%) 1fr;
-  margin-top: 50px;  
+  margin-top: 50px;
   gap: 10px;
 }
 
-
-.signup-reason, .signup-form {  
+.signup-reason,
+.signup-form {
   line-height: 1.5;
   font-size: 20px;
   background-color: white;
@@ -178,13 +178,14 @@ body.signup-page {
   border-bottom: 1px solid var(--slate-400);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding: 10%;
-  border-radius: 15px;  
+  border-radius: 15px;
 }
 
 .signup-reason {
   grid-column: 2;
 }
-.signup-reason h3, .signup-form h3 {
+.signup-reason h3,
+.signup-form h3 {
   color: var(--blue-900);
 }
 
@@ -194,3 +195,10 @@ body.signup-page {
   flex-direction: column;
 }
 
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}

@@ -13,35 +13,73 @@
     />
     <title>My Life Finance - Sign Up</title>
   </head>
-  <body class="signup-page">    
-      <header class="landing-page-header-container">
+  <body class="signup-page">
+    <header class="landing-page-header-container">
       <div class="logo-container">
         <a href="index.html">
-        <img
-          class="header-icon"
-          src="/images/MLF_Icon2.png"
-          alt="MLF Icon"
-        /></a><span><center>My Life Finance</center></span>
+          <img
+            class="header-icon"
+            src="/images/MLF_Icon2.png"
+            alt="MLF Icon" /></a
+        ><span><center>My Life Finance</center></span>
       </div>
       <div class="date-container" id="current-date"></div>
       <div class="greeting-container" id="greeting"></div>
       <div class="signup-signin-container">
         <div class="signin-link"><a href="#">Sign In</a></div>
-        <div class="signup-link"><a href="/signup.html" class="inactive-link">Sign Up</a></div>
+        <div class="signup-link">
+          <a href="/signup.html" class="inactive-link">Sign Up</a>
+        </div>
       </div>
-    </header>    
-    <div class="signup-content">      
+    </header>
+    <div class="signup-content">
       <div class="signup-reason">
-        <h3><center>Take control of your money.<br>Take control of your life.</center></h3>
-        <hr>
+        <h3>
+          <center>
+            Take control of your money.<br />Take control of your life.
+          </center>
+        </h3>
+        <hr />
         <span>
-          My Life Finance gives you a clear, simple way to organize your finances, understand where your money is going, and build a plan for where you want to go. Because financial freedom isn't just about having more money—it's about creating the freedom and confidence to live the life you deserve. Start today and turn financial stress into clarity, confidence, and control.
+          My Life Finance gives you a clear, simple way to organize your
+          finances, understand where your money is going, and build a plan for
+          where you want to go. Because financial freedom isn't just about
+          having more money—it's about creating the freedom and confidence to
+          live the life you deserve. Start today and turn financial stress into
+          clarity, confidence, and control.
         </span>
       </div>
       <div class="signup-form">
-        <h3><center>Who do we have the pleasure <br> of welcoming to our family?</center></h3>
-      </div>    
-      
+        <h3>
+          <center>
+            Who do we have the pleasure <br />
+            of welcoming to our family?
+          </center>
+        </h3>
+        <form id="multiStepSignUp">
+            <div class="form-container form-step active">
+            <label for="firstName"
+              >First Name </label><input type="text" id="firstName"
+            />
+            <label for="lastName"
+              >Last Name </label><input type="text" id="lastName"/>
+              <button type="button" onclick="nextStep()">Next</button>
+            </div>
+            <div class="form-step">
+            <label for="address1"
+              >Address #1 </label><input type="text" id="address1"
+            />
+            <label for="address2"
+              >Address #2 </label><input type="text" id="address2"
+            />
+            <label for="city">City </label><input type="text" id="city" />
+            <label for="state">State </label><input type="text" id="state" />
+            <label for="zip">Zip </label><input type="text" id="zip" />
+            <button type="button" onclick="createAccount(first, last)">Create Account</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
