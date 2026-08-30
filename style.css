@@ -160,45 +160,158 @@ body.signup-page {
   display: none;
 }
 
+/* Card & Page Layout Fixes */
 .signup-content {
   display: grid;
-  grid-template-columns: 1fr calc(40%) calc(40%) 1fr;
-  margin-top: 50px;
-  gap: 10px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  max-width: 1000px;
+  margin: 40px auto;
+  gap: 30px;
+  padding: 0 20px;
 }
 
 .signup-reason,
-.signup-form {
-  line-height: 1.5;
-  font-size: 20px;
-  background-color: white;
+.signup-card {
+  background-color: #ffffff;
   border-left: 6px solid var(--emerald-500);
   border-top: 1px solid var(--slate-400);
   border-right: 1px solid var(--slate-400);
   border-bottom: 1px solid var(--slate-400);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 10%;
-  border-radius: 15px;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.signup-reason h3,
+.signup-card h3 {
+  color: var(--blue-900);
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.signup-reason hr {
+  border: none;
+  border-top: 1px solid var(--slate-400);
+  margin: 16px 0;
+  opacity: 0.4;
+}
+
+.signup-reason p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Form Control Reset & Layout */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--slate-800);
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid var(--slate-400);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--text-primary);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--blue-400);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+
+.password-container input {
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.password-container .toggle-password{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color #666;  
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background-color: var(--button-action);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--emerald-600);
+}
+
+.btn-secondary {
+  background-color: var(--slate-400);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--slate-500);
 }
 
 .hidden {
   display: none !important;
-}
-
-.signup-reason {
-  grid-column: 2;
-}
-.signup-reason h3,
-.signup-form h3 {
-  color: var(--blue-900);
-}
-
-.signup-form {
-  grid-column: 3;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-step.active {
-  display: block;
 }

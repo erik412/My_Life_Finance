@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <title>My Life Finance - Sign Up</title>
@@ -17,11 +17,9 @@
     <header class="landing-page-header-container">
       <div class="logo-container">
         <a href="index.html">
-          <img
-            class="header-icon"
-            src="/images/MLF_Icon2.png"
-            alt="MLF Icon" /></a
-        ><span><center>My Life Finance</center></span>
+          <img class="header-icon" src="/images/MLF_Icon2.png" alt="MLF Icon" />
+        </a>
+        <span>My Life Finance</span>
       </div>
       <div class="date-container" id="current-date"></div>
       <div class="greeting-container" id="greeting"></div>
@@ -32,57 +30,64 @@
         </div>
       </div>
     </header>
-    <div class="signup-content">
+
+    <main class="signup-content">
       <div class="signup-reason">
-        <h3>
-          <center>
-            Take control of your money.<br />Take control of your life.
-          </center>
-        </h3>
+        <h3>Take control of your money.<br />Take control of your life.</h3>
         <hr />
-        <span>
+        <p>
           My Life Finance gives you a clear, simple way to organize your
           finances, understand where your money is going, and build a plan for
           where you want to go. Because financial freedom isn't just about
           having more money—it's about creating the freedom and confidence to
-          live the life you deserve. Start today and turn financial stress into
-          clarity, confidence, and control.
-        </span>
+          live the life you deserve.
+        </p>
       </div>
-      <div class="signup-form">
-        <h3>
-          <center>
-            Who do we have the pleasure <br />
-            of welcoming to our family?
-          </center>
-        </h3>
-        <form id="multiStepSignUp">
-          <!--Step 1-->
-            <fieldset id="step1">
-            <label for="firstName"
-              >First Name </label><input type="text" id="firstName"
-            />
-            <label for="lastName"
-              >Last Name </label><input type="text" id="lastName"/>
-              <button type="button" onclick="nextStep()">Next</button>
-            </fieldset>              
 
-        <!-- Step 2-->            
-            <fieldset id="step2" class="hidden">
-            <label for="address1"
-              >Address #1 </label><input type="text" id="address1"
-            />
-            <label for="address2"
-              >Address #2 </label><input type="text" id="address2"
-            />
-            <label for="city">City </label><input type="text" id="city" />
-            <label for="state">State </label><input type="text" id="state" />
-            <label for="zip">Zip </label><input type="text" id="zip" />
-            <button type="button" onclick="createAccount(first, last)">Create Account</button>
-            </fieldset>
-          </form>
-        </div>
+      <div class="signup-card">
+        <h3 id="formHeading">Who do we have the pleasure of welcoming?</h3>
+
+        <form id="multiStepSignUp">
+          <!-- Step 1 -->
+          <fieldset id="step1" class="form-step">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" required placeholder="Doe" />
+            </div>
+            <button type="button" class="btn-primary" id="nextBtn">Next</button>
+          </fieldset>
+
+          <!-- Step 2 -->
+          <fieldset id="step2" class="form-step hidden">
+            <div class="form-group full-width">
+              <label for="emailAddress">Email Address </label>
+              <input
+                type="text"
+                id="emailAddress"
+                placeholder="MyEmail@myemail.com"
+              />
+              <input
+                type="text"
+                class="password-container"
+                name="password"
+                id="password"
+                placeholder="Enter Password"
+              />
+              <i class="fa-solid fa-eye toggle-password" id="eyeIcon"></i>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn-secondary" id="backBtn">
+                Back
+              </button>
+              <button type="submit" class="btn-primary">Create Account</button>
+            </div>
+          </fieldset>
+        </form>
       </div>
-    </div>
+    </main>
   </body>
 </html>
