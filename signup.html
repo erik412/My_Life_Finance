@@ -57,15 +57,18 @@
           </center>
         </h3>
         <form id="multiStepSignUp">
-            <div class="form-container form-step active">
+          <!--Step 1-->
+            <fieldset id="step1">
             <label for="firstName"
               >First Name </label><input type="text" id="firstName"
             />
             <label for="lastName"
               >Last Name </label><input type="text" id="lastName"/>
               <button type="button" onclick="nextStep()">Next</button>
-            </div>
-            <div class="form-step">
+            </fieldset>              
+
+        <!-- Step 2-->            
+            <fieldset id="step2" class="hidden">
             <label for="address1"
               >Address #1 </label><input type="text" id="address1"
             />
@@ -76,7 +79,7 @@
             <label for="state">State </label><input type="text" id="state" />
             <label for="zip">Zip </label><input type="text" id="zip" />
             <button type="button" onclick="createAccount(first, last)">Create Account</button>
-            </div>
+            </fieldset>
           </form>
         </div>
       </div>

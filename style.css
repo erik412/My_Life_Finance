@@ -181,6 +181,10 @@ body.signup-page {
   border-radius: 15px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .signup-reason {
   grid-column: 2;
 }
@@ -193,10 +197,6 @@ body.signup-page {
   grid-column: 3;
   display: flex;
   flex-direction: column;
-}
-
-.form-step {
-  display: none;
 }
 
 .form-step.active {
