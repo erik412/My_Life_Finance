@@ -63,25 +63,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const lastName = document.getElementById("lastName");
   const emailAddress = document.getElementById("emailAddress");
   const password = document.getElementById("password");
-  const createAccount = document.getElementById('createAccount')
+  const createAccount = document.getElementById('createAccount');
+  const alertInfo = document.getElementById('alert'); 
+  const closeBtn = document.getElementById('closeBtn');
+  const eyeIcon = document.getElementById('eyeIcon');
 
 
   if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
+    nextBtn.addEventListener("click", () => {      
       userData.firstName = firstName.value.replace(/\s+/g, '').toUpperCase();
-      userData.lastName = lastName.value.replace(/\s+/g, '').toUpperCase();
+      userData.lastName = lastName.value.replace(/\s+/g, '').toUpperCase();      
+      if (!userData.firstName || !userData.lastName) {
+        alertInfo.showModal();
+        return
+      } else {
+        
+      }
+
       step1.classList.add("hidden");
       step2.classList.remove("hidden");
+      
       //handleNextBtn(userData)
     });
   }
+
+  closeBtn.addEventListener("click",() => {
+    alertInfo.close();
+   });
 
   if (backBtn) {
     backBtn.addEventListener("click", () => {
       step2.classList.add("hidden");
       step1.classList.remove("hidden");
+      firstName.value = ""
+      lastName.value = ""
     });
   }  
+
+  if (eyeIcon) {
+  eyeIcon.addEventListener('click', () => {
+    const isPassword = password.type === 'password';
+    password.type = isPassword ? 'text' : 'password';
+    
+    // Toggle icon visual state
+    eyeIcon.classList.toggle('fa-eye', !isPassword);
+    eyeIcon.classList.toggle('fa-eye-slash', isPassword);
+  });
+}
 
   if (createAccount){
   createAccount.addEventListener('click', ()=> {

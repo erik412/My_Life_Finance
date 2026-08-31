@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
     <title>My Life Finance - Sign Up</title>
   </head>
   <body class="signup-page">
@@ -58,8 +62,12 @@
               <label for="lastName">Last Name</label>
               <input type="text" id="lastName" required placeholder="Doe" />
             </div>
-            <button type="button" class="btn-primary" id="nextBtn">Next</button>
+            <button type="button" class="btn-primary" id="nextBtn">Next</button>            
           </fieldset>
+          <dialog class="first-last-dialog" id="alert">
+            <p>Please enter first and last name.</p>
+            <button type="button" id="closeBtn">Close</button>
+          </dialog>
 
           <!-- Step 2 -->
           <fieldset id="step2" class="form-step hidden">
@@ -71,14 +79,16 @@
                 placeholder="MyEmail@myemail.com"
               />
               <label for="password">Password </label>
+              <div class="password-wrapper">
               <input
-                type="text"
+                type="password"
                 class="password-container"
                 name="password"
                 id="password"
                 placeholder="Enter Password"
               />
               <i class="fa-solid fa-eye toggle-password" id="eyeIcon"></i>
+            </div>
             </div>
             <div class="button-group">
               <button type="button" class="btn-secondary" id="backBtn">
